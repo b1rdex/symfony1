@@ -137,6 +137,14 @@ function url_for()
   }
 }
 
+function append_parameters_to_url(array $parameters)
+{
+  return url_for2(
+    "",
+    array_merge(sfContext::getInstance()->getRequest()->getParameterHolder()->getAll(), $parameters)
+  );
+}
+
 /**
  * Creates a <a> link tag of the given name using a routed URL
  * based on the module/action passed as argument and the routing configuration.
