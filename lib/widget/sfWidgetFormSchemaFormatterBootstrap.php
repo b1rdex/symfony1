@@ -8,7 +8,7 @@ class sfWidgetFormSchemaFormatterBootstrap extends sfWidgetFormSchemaFormatter
     $errorRowFormatInARow      = "%error% ",
     $namedErrorRowFormatInARow = "%name%: %error% ",
     $helpFormat                = '<p class="help-block">%help%</p>',
-    $decoratorFormat           = '';
+    $decoratorFormat           = '%content%';
 
   public function formatRow($label, $field, $errors = array(), $help = '', $hiddenFields = null)
   {
