@@ -353,7 +353,11 @@ class sfException extends Exception
       $lines = array();
       for ($i = max($line - 3, 1), $max = min($line + 3, count($content)); $i <= $max; $i++)
       {
-        $lines[] = '<li'.($i == $line ? ' class="selected"' : '').'>'.$content[$i - 1].'</li>';
+        $lines[] = sprintf(
+          "<li%s>%s</li>"
+          , $i == $line ? ' class="selected"' : ''
+          , htmlspecialchars($content[$i - 1])
+        );
       }
 
       return '<ol start="'.max($line - 3, 1).'">'.implode("\n", $lines).'</ol>';
