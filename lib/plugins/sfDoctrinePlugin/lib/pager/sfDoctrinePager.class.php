@@ -15,7 +15,7 @@
  * @package    sfDoctrinePlugin
  * @subpackage pager
  * @author     Jonathan H. Wage <jonwage@gmail.com>
- * @version    SVN: $Id: sfDoctrinePager.class.php 28897 2010-03-30 20:30:24Z Jonathan.Wage $
+ * @version    SVN: $Id$
  */
 class sfDoctrinePager extends sfPager implements Serializable
 {
@@ -72,7 +72,7 @@ class sfDoctrinePager extends sfPager implements Serializable
       $this->$name = $values;
     }
 
-    $this->tableMethodCalled = false; 
+    $this->tableMethodCalled = false;
   }
 
   /**

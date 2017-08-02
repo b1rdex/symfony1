@@ -6,7 +6,7 @@
  * @package    symfony12
  * @subpackage articles
  * @author     Your name here
- * @version    SVN: $Id: actions.class.php 30442 2010-07-28 04:13:21Z Kris.Wallsmith $
+ * @version    SVN: $Id$
  */
 class articlesActions extends sfActions
 {
@@ -62,21 +62,21 @@ class articlesActions extends sfActions
 
     $this->redirect('articles/index');
   }
-  
+
   private function getArticleTable()
   {
     return Doctrine_Core::getTable('Article');
   }
-  
+
   private function getArticleById($id)
   {
     return $this->getArticleTable()->find($id);
   }
-  
+
   private function getArticleForm($id)
   {
     $article = $this->getArticleById($id);
-    
+
     if ($article instanceof Article)
     {
       return new ArticleForm($article);
