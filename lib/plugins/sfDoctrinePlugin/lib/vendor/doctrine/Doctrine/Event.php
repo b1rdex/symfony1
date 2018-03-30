@@ -356,7 +356,7 @@ class Doctrine_Event
      */
     public function getParams()
     {
-        return $this->_params;
+        return (array)$this->_params;
     }
 
     /**
