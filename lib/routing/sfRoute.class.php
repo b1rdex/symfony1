@@ -858,4 +858,9 @@ class sfRoute implements Serializable
     list($this->tokens, $this->defaultOptions, $this->options, $this->pattern, $this->staticPrefix, $this->regex, $this->variables, $this->defaults, $this->requirements, $this->suffix, $this->customToken) = unserialize($data);
     $this->compiled = true;
   }
+
+  public function setParameter($name, $value)
+  {
+    $this->parameters[$name] = $value;
+  }
 }
